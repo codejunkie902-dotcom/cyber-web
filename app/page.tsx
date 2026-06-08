@@ -1,7 +1,6 @@
 'use client';
 
 import { LoadingScreen } from '@/components/loading-screen';
-import { CustomCursor } from '@/components/custom-cursor';
 import { Navbar } from '@/components/navbar';
 import { HeroSection } from '@/components/hero-section';
 import { FeaturesSection } from '@/components/features-section';
@@ -17,7 +16,6 @@ export default function Home() {
   return (
     <>
       <LoadingScreen />
-      <CustomCursor />
       <Navbar />
 
       <main>
