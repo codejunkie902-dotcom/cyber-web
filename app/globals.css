@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyan: #00f5ff;
+  --cyan-dim: #00c8d4;
+  --blue: #0066ff;
+  --green: #00ff88;
+  --green-dim: #00cc6a;
+  --bg-primary: #05080f;
+  --bg-secondary: #080c18;
+  --bg-card: rgba(8, 18, 40, 0.6);
+  --border-glow: rgba(0, 245, 255, 0.2);
+  --text-primary: #e8f4ff;
+  --text-secondary: #7aa3c8;
+  --radius: 0.5rem;
+
+  --background: 220 30% 4%;
+  --foreground: 210 40% 94%;
+  --card: 220 40% 8%;
+  --card-foreground: 210 40% 94%;
+  --popover: 220 40% 6%;
+  --popover-foreground: 210 40% 94%;
+  --primary: 190 100% 50%;
+  --primary-foreground: 220 30% 4%;
+  --secondary: 220 30% 12%;
+  --secondary-foreground: 210 40% 94%;
+  --muted: 220 25% 10%;
+  --muted-foreground: 215 25% 55%;
+  --accent: 158 100% 50%;
+  --accent-foreground: 220 30% 4%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 30% 14%;
+  --input: 220 30% 12%;
+  --ring: 190 100% 50%;
+  --chart-1: 190 100% 50%;
+  --chart-2: 158 100% 50%;
+  --chart-3: 220 100% 60%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #05080f;
+    color: #e8f4ff;
+    font-family: 'Inter', -apple-system, sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  ::selection {
+    background: rgba(0, 245, 255, 0.25);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #05080f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 245, 255, 0.3);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 245, 255, 0.6);
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.4), 0 0 40px rgba(0, 245, 255, 0.2);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), 0 0 40px rgba(0, 255, 136, 0.2);
+  }
+  .text-glow-cyan {
+    text-shadow: 0 0 20px rgba(0, 245, 255, 0.8), 0 0 40px rgba(0, 245, 255, 0.4);
+  }
+  .text-glow-green {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(0, 255, 136, 0.4);
+  }
+
+  .glass {
+    background: rgba(8, 18, 40, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 245, 255, 0.12);
+  }
+  .glass-dark {
+    background: rgba(5, 8, 15, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 245, 255, 0.08);
+  }
+
+  .gradient-text-cyan {
+    background: linear-gradient(135deg, #00f5ff, #0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-text-green {
+    background: linear-gradient(135deg, #00ff88, #00c8d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-text-hero {
+    background: linear-gradient(135deg, #ffffff 0%, #00f5ff 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-cyber {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.1), rgba(0, 102, 255, 0.1));
+    border: 1px solid rgba(0, 245, 255, 0.4);
+    color: #00f5ff;
+    transition: all 0.3s ease;
+  }
+  .btn-cyber:hover {
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(0, 102, 255, 0.2));
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.4), inset 0 0 20px rgba(0, 245, 255, 0.05);
+  }
+
+  .btn-solid-cyber {
+    background: linear-gradient(135deg, #00c8d4, #0066ff);
+    color: #05080f;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .btn-solid-cyber:hover {
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.5), 0 0 60px rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .card-cyber {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 245, 255, 0.1);
+  }
+  .card-cyber:hover {
+    border-color: rgba(0, 245, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.15), 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+  }
+
+  .cyber-grid {
+    background-image:
+      linear-gradient(rgba(0, 245, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 245, 255, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .terminal-font {
+    font-family: 'Courier New', 'SF Mono', 'Fira Code', monospace;
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: 12px;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.6), rgba(0, 102, 255, 0.3), rgba(0, 255, 136, 0.4));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes attack-beam {
+  0% { stroke-dashoffset: 500; opacity: 0; }
+  15% { opacity: 0.9; }
+  85% { opacity: 0.9; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes loading-shift {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.loading-bar {
+  background: linear-gradient(90deg, #00f5ff, #0066ff, #00ff88, #00f5ff);
+  background-size: 200% 100%;
+  animation: loading-shift 1.5s linear infinite;
+}
