@@ -94,12 +94,12 @@ export function LearningPath() {
             style={{ background: 'rgba(0,245,255,0.06)', border: '1px solid rgba(0,245,255,0.2)' }}
           >
             <Star size={12} style={{ color: '#00f5ff' }} />
-            <span className="text-xs tracking-widest font-medium" style={{ color: '#00f5ff' }}>
+            <span className="text-xs tracking-wide font-medium" style={{ color: '#00f5ff' }}>
               STRUCTURED LEARNING PATHS
             </span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-black mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
             style={{
               background: 'linear-gradient(135deg, #fff, #a0c8ff)',
               WebkitBackgroundClip: 'text',
@@ -188,7 +188,7 @@ function PathModule({
         <div className="flex items-center justify-between p-5">
           <div className="flex items-center gap-4">
             <div
-              className="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-black"
+              className="w-10 h-10 rounded-xl flex items-center justify-center text-xs font-bold"
               style={{
                 background: `${module.color}15`,
                 border: `1px solid ${module.color}30`,

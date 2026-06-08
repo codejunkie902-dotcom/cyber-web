@@ -137,12 +137,12 @@ export function InteractiveTerminal() {
             style={{ background: 'rgba(0,255,136,0.06)', border: '1px solid rgba(0,255,136,0.2)' }}
           >
             <Terminal size={13} style={{ color: '#00ff88' }} />
-            <span className="text-xs tracking-widest font-medium" style={{ color: '#00ff88' }}>
+            <span className="text-xs tracking-wide font-medium" style={{ color: '#00ff88' }}>
               INTERACTIVE LAB
             </span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-black mb-4"
+            className="text-4xl lg:text-5xl font-bold mb-4"
             style={{
               background: 'linear-gradient(135deg, #fff, #a0c8ff)',
               WebkitBackgroundClip: 'text',

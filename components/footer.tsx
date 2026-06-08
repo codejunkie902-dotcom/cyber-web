@@ -72,7 +72,7 @@ export function Footer() {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h3
-                className="text-2xl font-black mb-2"
+                className="text-2xl font-bold mb-2"
                 style={{ color: '#e8f4ff' }}
               >
                 Stay Ahead of Threats
@@ -146,12 +146,12 @@ export function Footer() {
               >
                 <Shield size={16} color="#00f5ff" />
               </div>
-              <span className="font-black text-sm tracking-wider" style={{ color: '#fff' }}>
-                CYBERSCOPE<span style={{ color: '#00ff88' }}>AI</span>
+              <span className="font-semibold text-base tracking-tight" style={{ color: '#fff' }}>
+                CyberScope<span style={{ color: '#00ff88' }}> AI</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(120,160,200,0.6)' }}>
-              The world&apos;s most advanced cybersecurity education platform. Learn by doing.
+              Hands-on cybersecurity education. Learn by doing, in a safe environment.
             </p>
             {/* Socials */}
             <div className="flex gap-3">

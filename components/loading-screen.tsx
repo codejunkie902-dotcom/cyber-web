@@ -119,7 +119,7 @@ export function LoadingScreen() {
             className="mb-2"
           >
             <span
-              className="text-3xl font-black tracking-widest"
+              className="text-3xl font-semibold tracking-tight"
               style={{
                 background: 'linear-gradient(135deg, #ffffff, #00f5ff)',
                 WebkitBackgroundClip: 'text',
@@ -127,10 +127,10 @@ export function LoadingScreen() {
                 backgroundClip: 'text',
               }}
             >
-              CYBERSCOPE
+              CyberScope
             </span>
             <span
-              className="text-3xl font-black tracking-widest ml-2"
+              className="text-3xl font-semibold tracking-tight ml-2"
               style={{ color: '#00ff88' }}
             >
               AI
@@ -141,10 +141,10 @@ export function LoadingScreen() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="terminal-font text-xs tracking-[0.3em] mb-12"
+            className="terminal-font text-xs tracking-[0.15em] mb-12"
             style={{ color: 'rgba(0,245,255,0.5)' }}
           >
-            INITIALIZING SECURE ENVIRONMENT
+            Initializing secure environment
           </motion.p>
 
           {/* Progress bar */}

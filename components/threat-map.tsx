@@ -142,12 +142,12 @@ export function ThreatMap() {
                 className="w-1.5 h-1.5 rounded-full"
                 style={{ background: '#ff4444', boxShadow: '0 0 6px #ff4444', animation: 'blink 1.5s ease-in-out infinite' }}
               />
-              <span className="text-xs tracking-widest font-medium" style={{ color: '#ff6666' }}>
+              <span className="text-xs tracking-wide font-medium" style={{ color: '#ff6666' }}>
                 LIVE THREAT INTELLIGENCE
               </span>
             </div>
             <h2
-              className="text-4xl lg:text-5xl font-black"
+              className="text-4xl lg:text-5xl font-bold"
               style={{
                 background: 'linear-gradient(135deg, #fff, #a0c8ff)',
                 WebkitBackgroundClip: 'text',
