@@ -58,13 +58,13 @@ export function Navbar() {
             </div>
             <div className="flex items-baseline gap-1">
               <span
-                className="text-sm font-black tracking-wider"
+                className="text-base font-semibold tracking-tight"
                 style={{ color: '#fff' }}
               >
-                CYBERSCOPE
+                CyberScope
               </span>
               <span
-                className="text-sm font-black"
+                className="text-base font-semibold tracking-tight"
                 style={{ color: '#00ff88' }}
               >
                 AI

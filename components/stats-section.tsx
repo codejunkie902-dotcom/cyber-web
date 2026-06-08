@@ -85,7 +85,7 @@ function Counter({
 
   return (
     <span
-      className="text-5xl lg:text-6xl font-black tracking-tight"
+      className="text-5xl lg:text-6xl font-bold tracking-tight"
       style={{
         background: `linear-gradient(135deg, ${color}, #ffffff)`,
         WebkitBackgroundClip: 'text',
@@ -132,12 +132,12 @@ export function StatsSection() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4"
             style={{ background: 'rgba(0,245,255,0.06)', border: '1px solid rgba(0,245,255,0.2)' }}
           >
-            <span className="text-xs tracking-widest font-medium" style={{ color: '#00f5ff' }}>
+            <span className="text-xs tracking-wide font-medium" style={{ color: '#00f5ff' }}>
               BY THE NUMBERS
             </span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-black"
+            className="text-4xl lg:text-5xl font-bold"
             style={{
               background: 'linear-gradient(135deg, #fff, #a0c8ff)',
               WebkitBackgroundClip: 'text',
@@ -238,7 +238,7 @@ export function StatsSection() {
           />
           <div className="relative z-10">
             <h3
-              className="text-2xl font-black mb-2"
+              className="text-2xl font-bold mb-2"
               style={{ color: '#e8f4ff' }}
             >
               Join the Next Generation of Cyber Defenders

@@ -102,12 +102,12 @@ export function Testimonials() {
             style={{ background: 'rgba(0,245,255,0.06)', border: '1px solid rgba(0,245,255,0.2)' }}
           >
             <Star size={12} style={{ color: '#00f5ff' }} fill="#00f5ff" />
-            <span className="text-xs tracking-widest font-medium" style={{ color: '#00f5ff' }}>
+            <span className="text-xs tracking-wide font-medium" style={{ color: '#00f5ff' }}>
               COMMUNITY VOICES
             </span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-black"
+            className="text-4xl lg:text-5xl font-bold"
             style={{
               background: 'linear-gradient(135deg, #fff, #a0c8ff)',
               WebkitBackgroundClip: 'text',
@@ -168,7 +168,7 @@ export function Testimonials() {
               {/* Author */}
               <div className="flex items-center gap-4">
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-black flex-shrink-0"
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
                   style={{
                     background: `linear-gradient(135deg, ${t.color}30, ${t.color}10)`,
                     border: `1px solid ${t.color}40`,

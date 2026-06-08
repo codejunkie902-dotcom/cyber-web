@@ -24,62 +24,14 @@ function GlobePlaceholder() {
   );
 }
 
-const words = [
-  'Ethical Hacking',
-  'Penetration Testing',
-  'Network Defense',
-  'Malware Analysis',
-  'AI-Powered Security',
-];
-
-function TypewriterText() {
-  const [wordIndex, setWordIndex] = useState(0);
-  const [displayed, setDisplayed] = useState('');
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = words[wordIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!deleting && displayed.length < current.length) {
-      timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 80);
-    } else if (!deleting && displayed.length === current.length) {
-      timeout = setTimeout(() => setDeleting(true), 2000);
-    } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 40);
-    } else if (deleting && displayed.length === 0) {
-      setDeleting(false);
-      setWordIndex((i) => (i + 1) % words.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayed, deleting, wordIndex]);
-
-  return (
-    <span
-      className="text-glow-cyan"
-      style={{ color: '#00f5ff' }}
-    >
-      {displayed}
-      <span
-        className="ml-0.5 inline-block w-0.5 h-[1em] align-middle"
-        style={{
-          background: '#00f5ff',
-          animation: 'blink 1s step-end infinite',
-        }}
-      />
-    </span>
-  );
-}
-
 function ParticleField() {
-  const particles = Array.from({ length: 50 }, (_, i) => ({
+  const particles = Array.from({ length: 14 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    size: Math.random() * 2 + 0.5,
-    duration: 3 + Math.random() * 4,
-    delay: Math.random() * 4,
+    size: Math.random() * 1.5 + 0.5,
+    duration: 6 + Math.random() * 4,
+    delay: Math.random() * 5,
     color: i % 3 === 0 ? '#00f5ff' : i % 3 === 1 ? '#00ff88' : '#0066ff',
   }));
 
@@ -95,12 +47,11 @@ function ParticleField() {
             width: p.size,
             height: p.size,
             background: p.color,
-            boxShadow: `0 0 ${p.size * 3}px ${p.color}`,
+            boxShadow: `0 0 ${p.size * 2}px ${p.color}`,
           }}
           animate={{
-            y: [0, -30, 0],
-            opacity: [0, 0.8, 0],
-            scale: [0.5, 1.5, 0.5],
+            y: [0, -20, 0],
+            opacity: [0, 0.4, 0],
           }}
           transition={{
             duration: p.duration,
@@ -201,11 +152,10 @@ export function HeroSection() {
                 style={{
                   background: '#00ff88',
                   boxShadow: '0 0 6px #00ff88',
-                  animation: 'blink 2s ease-in-out infinite',
                 }}
               />
-              <span className="text-xs font-medium tracking-widest" style={{ color: '#00f5ff' }}>
-                AI-POWERED CYBERSECURITY EDUCATION
+              <span className="text-xs font-medium tracking-wide" style={{ color: '#00f5ff' }}>
+                AI-powered cybersecurity education
               </span>
             </motion.div>
 
@@ -214,31 +164,13 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
-              className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight mb-4"
+              className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
+              style={{ color: '#f0f6ff' }}
             >
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, #ffffff 0%, #a0c8ff 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Learn
-              </span>
+              Learn{' '}
+              <span style={{ color: '#00f5ff' }}>ethical hacking</span>
               <br />
-              <TypewriterText />
-              <br />
-              <span
-                style={{
-                  background: 'linear-gradient(135deg, #ffffff 0%, #a0c8ff 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Through Simulation
-              </span>
+              through hands-on simulation
             </motion.h1>
 
             <motion.p
@@ -248,8 +180,8 @@ export function HeroSection() {
               className="text-lg leading-relaxed mb-10 max-w-lg"
               style={{ color: 'rgba(160,190,220,0.8)' }}
             >
-              Explore hacking concepts, network defense, and AI-powered cyber
-              education in a futuristic immersive experience.
+              Practice real-world hacking, network defense, and threat analysis
+              in safe, guided labs — and learn by actually doing it.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -380,11 +312,11 @@ export function HeroSection() {
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        animate={{ opacity: [0.4, 1, 0.4], y: [0, 6, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        animate={{ y: [0, 5, 0] }}
+        transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <span className="text-xs tracking-widest" style={{ color: 'rgba(0,245,255,0.4)' }}>
-          SCROLL
+        <span className="text-xs tracking-wide" style={{ color: 'rgba(160,190,220,0.5)' }}>
+          Scroll
         </span>
         <div
           className="w-px h-8"
