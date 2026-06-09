@@ -78,6 +78,7 @@ export function Testimonials() {
 
   return (
     <section
+      id="testimonials"
       className="py-24 px-6 relative overflow-hidden"
       style={{ background: '#030810' }}
     >
