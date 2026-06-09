@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Simulations', href: '#terminal' },
   { label: 'Threat Map', href: '#threatmap' },
   { label: 'Roadmap', href: '#learning' },
-  { label: 'About', href: '#stats' },
+  { label: 'About', href: '#testimonials' },
 ];
 
 export function Navbar() {

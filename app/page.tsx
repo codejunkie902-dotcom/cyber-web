@@ -7,7 +7,6 @@ import { FeaturesSection } from '@/components/features-section';
 import { InteractiveTerminal } from '@/components/interactive-terminal';
 import { ThreatMap } from '@/components/threat-map';
 import { LearningPath } from '@/components/learning-path';
-import { StatsSection } from '@/components/stats-section';
 import { Testimonials } from '@/components/testimonials';
 import { Footer } from '@/components/footer';
 import { AIChatbot } from '@/components/ai-chatbot';
@@ -24,7 +23,6 @@ export default function Home() {
         <InteractiveTerminal />
         <ThreatMap />
         <LearningPath />
-        <StatsSection />
         <Testimonials />
       </main>
 
