@@ -86,13 +86,7 @@ function Counter({
   return (
     <span
       className="text-5xl lg:text-6xl font-bold tracking-tight"
-      style={{
-        background: `linear-gradient(135deg, ${color}, #ffffff)`,
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        backgroundClip: 'text',
-        textShadow: 'none',
-      }}
+      style={{ color }}
     >
       {format(current)}
       {suffix}
@@ -133,22 +127,19 @@ export function StatsSection() {
             style={{ background: 'rgba(0,245,255,0.06)', border: '1px solid rgba(0,245,255,0.2)' }}
           >
             <span className="text-xs tracking-wide font-medium" style={{ color: '#00f5ff' }}>
-              BY THE NUMBERS
+              By the numbers
             </span>
           </div>
           <h2
-            className="text-4xl lg:text-5xl font-bold"
-            style={{
-              background: 'linear-gradient(135deg, #fff, #a0c8ff)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            className="text-3xl lg:text-4xl font-bold"
+            style={{ color: '#f0f6ff' }}
           >
-            Trusted by Security Professionals
-            <br />
-            Around the World
+            Trusted by security teams around the world
           </h2>
+          <p className="text-base mt-4 max-w-xl mx-auto" style={{ color: 'rgba(160,190,220,0.75)' }}>
+            A growing community of learners and professionals practicing
+            security skills every day.
+          </p>
         </motion.div>
 
         {/* Stats grid */}
@@ -168,21 +159,8 @@ export function StatsSection() {
                   border: '1px solid rgba(0,245,255,0.08)',
                   transition: 'all 0.4s ease',
                 }}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -2 }}
               >
-                {/* Hover glow */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-                  style={{
-                    background: `radial-gradient(ellipse at 50% 0%, ${stat.color}10, transparent 70%)`,
-                  }}
-                />
-                <div
-                  className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{
-                    background: `linear-gradient(90deg, transparent, ${stat.color}80, transparent)`,
-                  }}
-                />
 
                 <div className="relative z-10">
                   <div
@@ -226,25 +204,19 @@ export function StatsSection() {
           transition={{ delay: 0.4 }}
           className="mt-12 rounded-2xl p-8 text-center relative overflow-hidden"
           style={{
-            background: 'linear-gradient(135deg, rgba(0,102,255,0.08), rgba(0,245,255,0.05))',
-            border: '1px solid rgba(0,245,255,0.15)',
+            background: 'rgba(8,14,30,0.6)',
+            border: '1px solid rgba(0,245,255,0.12)',
           }}
         >
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backgroundImage: 'repeating-linear-gradient(45deg, rgba(0,245,255,0.02) 0px, rgba(0,245,255,0.02) 1px, transparent 1px, transparent 12px)',
-            }}
-          />
           <div className="relative z-10">
             <h3
               className="text-2xl font-bold mb-2"
               style={{ color: '#e8f4ff' }}
             >
-              Join the Next Generation of Cyber Defenders
+              Ready to start learning?
             </h3>
             <p className="text-sm mb-6" style={{ color: 'rgba(140,170,200,0.7)' }}>
-              Get instant access to 200+ labs, real threat scenarios, and an AI tutor.
+              Get hands-on with 200+ labs, real threat scenarios, and an AI tutor — free to start.
             </p>
             <motion.button
               className="px-8 py-3 rounded-xl btn-solid-cyber text-sm font-bold inline-flex items-center gap-2"
