@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, Menu, X, Zap } from 'lucide-react';
+import { useAuthModal } from '@/components/auth-modal';
 
 const navLinks = [
   { label: 'Learn', href: '#features' },
@@ -15,6 +16,7 @@ const navLinks = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { open } = useAuthModal();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -94,6 +96,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <motion.button
+              onClick={() => open('signin')}
               className="px-4 py-2 text-sm rounded-lg btn-cyber"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -101,6 +104,7 @@ export function Navbar() {
               Sign In
             </motion.button>
             <motion.button
+              onClick={() => open('signup')}
               className="px-4 py-2 text-sm rounded-lg btn-solid-cyber flex items-center gap-1.5"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -155,7 +159,13 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <button className="w-full py-2.5 text-sm rounded-lg btn-solid-cyber mt-2">
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  open('signup');
+                }}
+                className="w-full py-2.5 text-sm rounded-lg btn-solid-cyber mt-2"
+              >
                 Get Started Free
               </button>
             </div>

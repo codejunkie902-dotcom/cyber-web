@@ -65,6 +65,16 @@
     color: #fff;
   }
 
+  /* Accessible, consistent keyboard focus ring */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid rgba(0, 245, 255, 0.6);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
   ::-webkit-scrollbar {
     width: 4px;
   }
@@ -137,6 +147,23 @@
   .btn-cyber:hover {
     background: linear-gradient(135deg, rgba(0, 245, 255, 0.16), rgba(0, 102, 255, 0.16));
     box-shadow: 0 4px 16px rgba(0, 245, 255, 0.15);
+  }
+
+  .auth-input {
+    flex: 1 1 auto;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eaf2ff;
+    font-size: 0.875rem;
+    padding: 0.7rem 0;
+  }
+  .auth-input::placeholder {
+    color: rgba(140, 165, 195, 0.5);
+  }
+  .auth-input:focus-visible {
+    outline: none;
   }
 
   .btn-solid-cyber {

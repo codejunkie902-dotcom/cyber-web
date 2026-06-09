@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, Suspense } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Play, Shield, Zap, Lock } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import { useAuthModal } from '@/components/auth-modal';
 
 const CyberGlobe = dynamic(
   () => import('./cyber-globe').then((m) => ({ default: m.CyberGlobe })),
@@ -88,6 +89,7 @@ function HexGrid() {
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { open } = useAuthModal();
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 600], [0, 150]);
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
@@ -192,6 +194,7 @@ export function HeroSection() {
               className="flex flex-wrap gap-4 mb-12"
             >
               <motion.button
+                onClick={() => open('signup')}
                 className="group px-7 py-3.5 rounded-xl btn-solid-cyber flex items-center gap-2 text-sm font-semibold"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -204,6 +207,11 @@ export function HeroSection() {
                 />
               </motion.button>
               <motion.button
+                onClick={() => {
+                  document
+                    .getElementById('terminal')
+                    ?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="group px-7 py-3.5 rounded-xl btn-cyber flex items-center gap-2 text-sm font-semibold"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
