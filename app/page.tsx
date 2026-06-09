@@ -10,10 +10,11 @@ import { LearningPath } from '@/components/learning-path';
 import { Testimonials } from '@/components/testimonials';
 import { Footer } from '@/components/footer';
 import { AIChatbot } from '@/components/ai-chatbot';
+import { AuthModalProvider } from '@/components/auth-modal';
 
 export default function Home() {
   return (
-    <>
+    <AuthModalProvider>
       <LoadingScreen />
       <Navbar />
 
@@ -28,6 +29,6 @@ export default function Home() {
 
       <Footer />
       <AIChatbot />
-    </>
+    </AuthModalProvider>
   );
 }
